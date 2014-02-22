@@ -31,6 +31,8 @@ namespace ad
 
   void nonogram::solve ()
   {
+    uint passes = 0;
+
     bool solved;
     do
       {
@@ -65,8 +67,11 @@ namespace ad
 		  solved = false;
 		}
 	  }
+	++ passes;
+	std::cerr << "pass " << passes << "...\n";
       }
     while (solved == false);
+    std::cerr << passes << " passes\n";
   }
 
   std::istream & operator >> (std::istream & is, nonogram & ng)

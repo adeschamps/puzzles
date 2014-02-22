@@ -6,7 +6,7 @@ To solve a nonogram, you must fill a grid with black squares.
 Each row and column has a list of numbers which denotes the number of black squares required, and how they are to be grouped.
 Try it at http://www.puzzle-nonograms.com
 
-The crux of this program is the row_iterator class, which, given a vector describing the groupings of black squares, iterates over every possible way to arrange them. For example, if a row of length 5 must contain a blocks of length 2 and 1, there are three ways to achieve this:
+The crux of this program is the row_iterator class, which, given a vector describing the groupings of black squares, iterates over every possible way to arrange them. For example, if a row of length 5 must contain blocks of length 2 and 1, there are three ways to achieve this:
 
 * X X _ X _
 * X X _ _ X
@@ -20,3 +20,7 @@ This method assumes that the puzzle has a unque solution, otherwise this procedu
 
 I include an example input file, taken from the above website (25x25, ID: 706,720).
 The program solves the puzzle in 10 passes.
+
+I wrote most of this in one sitting, so it could certainly be improved.
+The row_iterator class could be improved if it considered the cells which are already known; this would allow the increment function to skip a large number of arrangements.
+The first pass would still consider everything, but subsequenty passes would be much quicker.
