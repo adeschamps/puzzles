@@ -8,9 +8,9 @@ Try it at http://www.puzzle-nonograms.com
 
 The crux of this program is the row_iterator class, which, given a vector describing the groupings of black squares, iterates over every possible way to arrange them. For example, if a row of length 5 must contain a blocks of length 2 and 1, there are three ways to achieve this:
 
-XX_X_
-XX__X
-_XX_X
+* XX_X_
+* XX__X
+* _XX_X
 
 Notice that in all three cases, the second cell is black.
 The nonogram::solve() function iterates over each row and column and collects every arrangement which satisfies the hints and is consistent with the already known cells.
