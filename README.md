@@ -38,6 +38,9 @@ The output is
 
     a solution was found:   rrrddllu
 
+Basically, each arrangement of dots (called a gamestate) is treated as a node.
+A breadth first search is performed from the initial node until a solved state is found.
+
 ## Nonograms ##
 
 To solve a nonogram, you must fill a grid with black squares.
