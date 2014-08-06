@@ -68,7 +68,6 @@ namespace ad
 		}
 	  }
 	++ passes;
-	std::cerr << "pass " << passes << "...\n";
       }
     while (solved == false);
     std::cerr << passes << " passes\n";
