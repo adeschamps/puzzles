@@ -22,6 +22,7 @@ For example, Pack 5 Level 62:
 ![Pack 5, Level 62](move_screenshot_5_62.png)
 
 The corresponding input file (move_5_62.in) is
+
     4 4
     .b..
     .b.x
@@ -34,6 +35,7 @@ The corresponding input file (move_5_62.in) is
     3 1 r
 
 The output is
+
     a solution was found:   rrrddllu
 
 ## Nonograms ##
