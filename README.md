@@ -19,9 +19,9 @@ The program takes input from stdin as follows:
 
 For example, Pack 5 Level 62:
 
-![Pack 5, Level 62](move_screenshot_5_62.png)
+![Pack 5, Level 62](move/move_screenshot_5_62.png)
 
-The corresponding input file (move_5_62.in) is
+The corresponding input file (move/move_5_62.in) is
 
     4 4
     .b..
