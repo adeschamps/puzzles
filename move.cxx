@@ -56,7 +56,6 @@ public:
   { return grid[h*width + w]; }
 
   friend std::istream & operator >> (std::istream & is, board & b);
-  // friend std::ostream & operator << (std::ostream & os, board const & b);
 };
 
 std::istream & operator >> (std::istream & is, board & b)
@@ -229,55 +228,4 @@ int main ()
 	std::cout << c;
       std::cout << '\n';
     }
-
-  // std::map<gamestate, int> open_nodes;
-  // std::map<gamestate, int> visited_nodes;
-
-  // open_nodes[gs] = 0;
-
-  // for (auto const & node : open_nodes)
-  //   std::cout << "distance: " << node.second << '\n'
-  // 	      << node.first
-  // 	      << '\n';
-
-  // while (open_nodes.empty() == false)
-  //   {
-  //     std::cerr << "open_nodes.size(): " << open_nodes.size() << '\n';
-  //     auto iter = open_nodes.begin();
-  //     for (char d : std::string("udlr"))
-  // 	{
-  // 	  gamestate next_gs = slide (iter -> first, b, d);
-  // 	  if (visited_nodes.count(next_gs) == 0)
-  // 	    {
-  // 	      std::cerr << "considering next_gs from " << d << "...\n";
-  // 	      if (open_nodes.count(next_gs) == 0 || open_nodes.at(next_gs) < iter -> second)
-  // 		{
-  // 		  std::cerr << "modifying open_nodes...\n";
-  // 		  open_nodes[next_gs] = iter -> second + 1;
-  // 		}
-  // 	      std::cerr << "done with " << d << '\n';
-  // 	    }
-  // 	}
-  //     std::cerr << "visited_nodes.size(): " << visited_nodes.size() << '\n';
-  //     visited_nodes.insert(*iter);
-  //     std::cerr << "visited_nodes.size(): " << visited_nodes.size() << '\n';
-  //     open_nodes.erase(iter);
-  //     std::cerr << "open_nodes.size(): " << open_nodes.size() << '\n';
-  //   }
-
-  // for (std::pair<gamestate, int> const & pair : visited_nodes)
-  //   {
-  //     std::cout << "distance: " << pair.second << '\n';
-  //     print_board (std::cout, b, pair.first);
-  //     std::cout << '\n';
-  //   }
-
-  // print_board (std::cout, b, gs);
-  // std::cout << "solved? " << (solved(gs,b) ? "yes" : "no") << '\n';
-  // gs = slide (gs, b, 'd');
-  // print_board (std::cout, b, gs);
-  // std::cout << "solved? " << (solved(gs,b) ? "yes" : "no") << '\n';
-  // gs = slide (gs, b, 'r');
-  // print_board (std::cout, b, gs);
-  // std::cout << "solved? " << (solved(gs,b) ? "yes" : "no") << '\n';
 }
