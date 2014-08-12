@@ -1,5 +1,12 @@
 # Puzzles #
 
+## Hexus ##
+
+[Hexus](http://www.brainwright.com/products/display/8003D) is a polyominoes game by Brainwright.
+A good explanation can be found [here](http://thepuzzleden.blogspot.ca/2013/07/hexus-from-brainwright.html).
+
+The code is messy and not fully documented. I'll come back to it later.
+
 ## Move: A Brain Shifting Puzzle ##
 
 This program solves the puzzles in the Android game [Move: A Brain Shifting Puzzle](https://play.google.com/store/apps/details?id=com.nitako.move) by [Nitako](https://play.google.com/store/apps/developer?id=Nitako+Brain+Puzzles).
