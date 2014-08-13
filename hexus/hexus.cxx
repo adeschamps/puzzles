@@ -5,36 +5,20 @@
 #include <tuple>
 #include <vector>
 
-/////////////
-// colours //
-/////////////
-
-#define C_WHITE   "\e[38;5;15m"
-#define C_RED     "\e[38;5;9m"
-#define C_ORANGE  "\e[38;5;202m"
-#define C_YELLOW  "\e[38;5;11m"
-#define C_LIME    "\e[38;5;10m"
-#define C_GREEN   "\e[38;5;22m"
-#define C_CYAN    "\e[38;5;14m"
-#define C_BLUE    "\e[38;5;20m"
-#define C_PINK    "\e[38;5;13m"
-#define C_DEFAULT "\e[90m"
-
-void colourtest ();
 std::string colour (char c)
 {
   switch (c)
     {
-    case 'w': return C_WHITE;
-    case 'r': return C_RED;
-    case 'o': return C_ORANGE;
-    case 'y': return C_YELLOW;
-    case 'l': return C_LIME;
-    case 'g': return C_GREEN;
-    case 'c': return C_CYAN;
-    case 'b': return C_BLUE;
-    case 'p': return C_PINK;
-    default:  return C_DEFAULT;
+    case 'w': return "\e[38;5;15m";  // White
+    case 'r': return "\e[38;5;9m";   // Red
+    case 'o': return "\e[38;5;202m"; // Orange
+    case 'y': return "\e[38;5;11m";  // Yellow
+    case 'l': return "\e[38;5;10m";  // Lime
+    case 'g': return "\e[38;5;22m";  // Green
+    case 'c': return "\e[38;5;14m";  // Cyan
+    case 'b': return "\e[38;5;20m";  // Blue
+    case 'p': return "\e[38;5;13m";  // Pink
+    default:  return "\e[90m";       // Default
     }
 }
 
@@ -295,24 +279,4 @@ int main ()
 	    colour_vector[i] = colour_index[pc];
 
   print_board(std::cout, b, colour_vector);
-}
-
-
-void colourtest ()
-{
-  std::cout << C_WHITE << "WHITE\n"
-	    << C_RED << "RED\n"
-	    << C_ORANGE << "ORANGE\n"
-	    << C_YELLOW << "YELLOW\n"
-	    << C_LIME << "LIME\n"
-	    << C_GREEN << "GREEN\n"
-	    << C_CYAN << "CYAN\n"
-	    << C_BLUE << "BLUE\n"
-	    << C_PINK << "PINK\n"
-	    << C_DEFAULT << "DEFAULT\n";
-
-
-
-  for (int i=0; i != 255; ++i)
-    std::cout << "\e[38;5;" << i << "m" << i << '\t';
 }
