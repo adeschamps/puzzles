@@ -71,4 +71,4 @@ The program solves the puzzle in 10 passes.
 
 I wrote most of this in one sitting, so it could certainly be improved.
 The row_iterator class could be improved if it considered the cells which are already known; this would allow the increment function to skip a large number of arrangements.
-The first pass would still consider everything, but subsequenty passes would be much quicker.
+The first pass would still consider everything, but subsequent passes would be much quicker.
